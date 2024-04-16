@@ -41,7 +41,7 @@ def get_kem_property_dag(name: str):
     node13 = encode_property_and_add_to_dag(dag, [5, 2])
     node14 = encode_property_and_add_to_dag(dag, [5, 3])
     node15 = encode_property_and_add_to_dag(dag, [2, 3])
-    node16 = encode_property_and_add_to_dag(dag, [6, 5, 1])
+    node16 = encode_property_and_add_to_dag(dag, [6, 2])
     node17 = encode_property_and_add_to_dag(dag, [6, 3])
     node18 = encode_property_and_add_to_dag(dag, [5])
     node19 = encode_property_and_add_to_dag(dag, [2])
