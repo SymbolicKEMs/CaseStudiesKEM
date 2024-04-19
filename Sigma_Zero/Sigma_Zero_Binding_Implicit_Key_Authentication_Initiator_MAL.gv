@@ -1,4 +1,4 @@
-// OnepassAKE/OnepassAKE.spthy_ImplicitKeyAuthA_MAL_1713179907.086333
+// Sigma_Zero/Sigma.spthy_Implicit_Key_Authentication_Initiator_MAL_1713180671.698731
 digraph {
 	node [color=green style=filled]
 	"bindktoct, bindcttopk, bindcttok" [label="bindktoct, bindcttopk, bindcttok"]

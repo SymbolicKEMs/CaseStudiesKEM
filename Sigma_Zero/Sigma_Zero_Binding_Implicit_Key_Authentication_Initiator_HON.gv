@@ -1,4 +1,4 @@
-// OnepassAKE/OnepassAKE.spthy_ImplicitKeyAuthA_1713179895.485904
+// Sigma_Zero/Sigma.spthy_Implicit_Key_Authentication_Initiator_1713179912.455199
 digraph {
 	node [color=green style=filled]
 	"bindktoct, bindcttopk" [label="bindktoct, bindcttopk"]
