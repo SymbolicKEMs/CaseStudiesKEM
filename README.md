@@ -21,6 +21,26 @@ and the precomputed Results can be found in `precomputed_RES`
 
 ## Dependencies
 
+For convenience, we provide an image that contains all dependencies, which
+can be run either via `docker` or `podman`. We provide scripts that use `podman`.
+
+Run
+
+```
+./build-container.sh
+```
+to locally build the container image. Then start the container via
+
+```
+./start-container.sh
+```
+
+This will launch the container in the current directory.
+
+### Manual Installation of Dependencies
+
+#### Tamarin Prover
+
 We rely on the [Tamarin prover](https://tamarin-prover.com/) version 1.9.0. on the develop branch
 
 ```
@@ -41,7 +61,7 @@ Git revision: 86014ad1844247b4faac36bc15f83befde30dcd7, branch: develop
 
 Details regarding installation can be found on [Tamarin's webpage](https://tamarin-prover.com/manual/master/book/002_installation.html)
 
-### Python Dependencies
+#### Python Dependencies
 
 To install all dependencies to execute the case studies, run
 
@@ -58,7 +78,7 @@ pip3 install tabulate matplotlib graphviz
 To execute all case studies run
 
 ```
-sh analysis.sh all
+./analysis.sh all
 ```
 
 Alternativley, to execute single case studies, replace the `all` with `onepass`,`kyber`,`sigma`,`perfectsigma` or `pqspdm`.
@@ -69,15 +89,19 @@ To search the minimal needed binding properties of the lemmas mentioned in Table
 execute
 
 ```
-sh Onepass.sh
+./Onepass.sh
 ```
 
 ```
-sh kyber.sh
+./kyber.sh
 ```
 
 ```
-sh sigma.sh
+./sigma.sh
+```
+
+```
+./sigma-perfect.sh
 ```
 
 and you can find the results as `.pdf`-files in the respective protocol folders
