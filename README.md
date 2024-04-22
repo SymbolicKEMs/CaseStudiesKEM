@@ -19,6 +19,8 @@ Sigma_Zero
 
 and the precomputed Results can be found in `precomputed_RES`
 
+------ 
+
 ## Dependencies
 
 For convenience, we provide an image that contains all dependencies, which
@@ -41,22 +43,23 @@ This will launch the container in the current directory.
 
 #### Tamarin Prover
 
-We rely on the [Tamarin prover](https://tamarin-prover.com/) version 1.9.0. on the develop branch
+We rely on the [Tamarin prover](https://tamarin-prover.com/) version 1.8.0. on the master branch
 
 ```
-tamarin-prover 1.9.0, (C) David Basin, Cas Cremers, Jannik Dreier, Simon Meier, Ralf Sasse, Benedikt Schmidt, 2010-2023
+tamarin-prover 1.8.0, (C) David Basin, Cas Cremers, Jannik Dreier, Simon Meier, Ralf Sasse, Benedikt Schmidt, 2010-2023
 
 This program comes with ABSOLUTELY NO WARRANTY. It is free software, and you
 are welcome to redistribute it according to its LICENSE, see
 'https://github.com/tamarin-prover/tamarin-prover/blob/master/LICENSE'.
 
 maude tool: 'maude'
-checking version: 2.7.1. OK.
-checking installation: OK.
+ checking version: 3.1. OK.
+ checking installation: OK.
 Generated from:
-Tamarin version 1.9.0
-Maude version 2.7.1
-Git revision: 86014ad1844247b4faac36bc15f83befde30dcd7, branch: develop
+Tamarin version 1.8.0
+Maude version 3.1
+Git revision: UNKNOWN, branch: master
+Compiled at: 2024-04-16 13:02:34.37557056 UTC
 ```
 
 Details regarding installation can be found on [Tamarin's webpage](https://tamarin-prover.com/manual/master/book/002_installation.html)
@@ -71,7 +74,12 @@ apt-get install python3-pip
 pip3 install tabulate matplotlib graphviz
 ```
 
+-------
+
 ## Instructions to reproduce the results
+
+We run the full analysis on a computing cluster with an Intel(R) Xeon(R) CPU E5-4650L 2.60GHz machine with 1TB of RAM and 4
+threads per Tamarin call. The execution time of our full methodology was approximately ∼16h30m.
 
 ### Main analysis
 
@@ -82,6 +90,12 @@ To execute all case studies run
 ```
 
 Alternativley, to execute single case studies, replace the `all` with `onepass`,`kyber`,`sigma`,`perfectsigma` or `pqspdm`.
+
+The results can then be compared to the results in `precomputed_RES`.
+
+The results are saved as `.csv` files and can be found in folders named after the case study and the KEM configuration used. 
+The `.csv` files contain a list, that for each lemma of the protocol models saves the proof results and timing information. For
+more details we refer to the `Methodology` section in the [full paper](https://eprint.iacr.org/2023/1933.pdf)
 
 ### Finding the right binding properties
 
@@ -104,9 +118,11 @@ execute
 ./sigma-perfect.sh
 ```
 
-and you can find the results as `.pdf`-files in the respective protocol folders
+and you can find the results as `.pdf`-files in the respective protocol folders. You can find the precomputed `.pdf`-files
+in the same folder as well. Here, green nodes refer to a lemma being proven under the combination of binding properties, red
+nodes denote an attack being found, while yellow nodes shows non-termination in the given time frame.
 
-### Oracle Tests
+#### Oracle Tests
 
 To see that the hierarchy of binding properties from Figure 7 also in the symbolic model
 one can also run
@@ -121,3 +137,12 @@ the binding games from Figure 5 and Figure 6.
 ## KEM Library
 
 All details on how to use the KEMlibrary can be found [here](README_KEMlibrary.md)
+
+-------
+
+### Authors
+
+Cas Cremers, Alexander Dax, and Niklas Medinger
+
+CISPA Helmholtz Center for Information Security (2024)
+
