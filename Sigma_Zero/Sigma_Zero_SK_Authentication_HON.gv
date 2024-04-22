@@ -1,4 +1,4 @@
-// Sigma_Zero/Sigma.spthy_SK_Authentication_1713179912.455199
+// Sigma_Zero/Sigma.spthy_SK_Authentication_1713772782.804352
 digraph {
 	node [color=green style=filled]
 	"bindktoct, bindcttopk" [label="bindktoct, bindcttopk"]
@@ -12,7 +12,7 @@ digraph {
 	"bindpkktoct, bindcttopk" [label="bindpkktoct, bindcttopk"]
 	node [color=green style=filled]
 	"bindpkktoct, bindktopk, bindcttok" [label="bindpkktoct, bindktopk, bindcttok"]
-	node [color=green style=filled]
+	node [color=red style=filled]
 	"bindktoct, bindktopk" [label="bindktoct, bindktopk"]
 	node [color=green style=filled]
 	"bindktoct, bindkcttopk, bindcttok" [label="bindktoct, bindkcttopk, bindcttok"]
@@ -22,16 +22,16 @@ digraph {
 	"bindktopk, bindcttok" [label="bindktopk, bindcttok"]
 	node [color=green style=filled]
 	"bindpkktoct, bindkcttopk, bindcttok" [label="bindpkktoct, bindkcttopk, bindcttok"]
-	node [color=green style=filled]
+	node [color=red style=filled]
 	"bindpkktoct, bindktopk" [label="bindpkktoct, bindktopk"]
-	node [color=green style=filled]
+	node [color=red style=filled]
 	"bindktoct, bindkcttopk" [label="bindktoct, bindkcttopk"]
 	node [color=green style=filled]
 	"bindktoct, bindcttok" [label="bindktoct, bindcttok"]
 	node [color=green style=filled]
 	"bindkcttopk, bindcttok" [label="bindkcttopk, bindcttok"]
-	node [color=green style=filled]
-	"bindpkktoct, bindktoct, bindcttopk" [label="bindpkktoct, bindktoct, bindcttopk"]
+	node [color=red style=filled]
+	"bindpkktoct, bindkcttopk" [label="bindpkktoct, bindkcttopk"]
 	node [color=green style=filled]
 	"bindpkktoct, bindcttok" [label="bindpkktoct, bindcttok"]
 	node [color=red style=filled]
@@ -69,18 +69,18 @@ digraph {
 	"bindktopk, bindcttok" -> "bindkcttopk, bindcttok"
 	"bindktopk, bindcttok" -> bindktopk
 	"bindpkktoct, bindkcttopk, bindcttok" -> "bindkcttopk, bindcttok"
-	"bindpkktoct, bindkcttopk, bindcttok" -> "bindpkktoct, bindktoct, bindcttopk"
+	"bindpkktoct, bindkcttopk, bindcttok" -> "bindpkktoct, bindkcttopk"
 	"bindpkktoct, bindkcttopk, bindcttok" -> "bindpkktoct, bindcttok"
-	"bindpkktoct, bindktopk" -> "bindpkktoct, bindktoct, bindcttopk"
+	"bindpkktoct, bindktopk" -> "bindpkktoct, bindkcttopk"
 	"bindpkktoct, bindktopk" -> bindktopk
-	"bindktoct, bindkcttopk" -> "bindpkktoct, bindktoct, bindcttopk"
+	"bindktoct, bindkcttopk" -> "bindpkktoct, bindkcttopk"
 	"bindktoct, bindkcttopk" -> bindktoct
 	"bindktoct, bindcttok" -> bindktoct
 	"bindktoct, bindcttok" -> bindcttok
 	"bindkcttopk, bindcttok" -> bindkcttopk
 	"bindkcttopk, bindcttok" -> bindcttok
-	"bindpkktoct, bindktoct, bindcttopk" -> bindkcttopk
-	"bindpkktoct, bindktoct, bindcttopk" -> bindpkktoct
+	"bindpkktoct, bindkcttopk" -> bindkcttopk
+	"bindpkktoct, bindkcttopk" -> bindpkktoct
 	"bindpkktoct, bindcttok" -> bindcttok
 	"bindpkktoct, bindcttok" -> bindpkktoct
 	bindktoct -> bindpkktoct
